@@ -62,5 +62,5 @@ whonwhere() {
   echo "%{$fg_bold[green]%}%n%{$reset_color%}@%m"
 }
 
-export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | rvm: $(rvm_prompt) | git: $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | %Urvm%u: $(rvm_prompt) | %Ugit%u: $(git_dirty)$(need_push)\n› '
 
