@@ -1,0 +1,27 @@
+parse_git() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/<git::\1> /'
+}
+
+parse_svn() {
+    svn info 2>/dev/null | sed -ne 's#^Revision: ##p' | awk '{ print "<svn::"$1"> "}'
+}
+
+PS1="\[\033[01;35m\][\t]\[\033[01;34m\]\[\033[0;33m\] \$(parse_git)\$(parse_svn)\[\033[01;34m\]\w \$\[\033[00m\] "
+
+#PS1="\[\033[01;35m\]\h\[\033[01;34m\] \W \$\[\033[00m\] "
+#PS1="\[\033[0;33m\]{\!}\[\033[00m\]-\[\033[01;35m\][\t]\[\033[01;34m\] \[\033[0;33m\]\$(parse_vcs_folder)\[\033[01;34m\]\w \$\[\033[00m\] "
+
+export PATH=$PATH:/Users/dkerwin/bin
+#export COMMAND_MODE=unix2003
+
+# Amazon tools
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+export EC2_HOME=/Users/dkerwin/development/ec2-api-tools-1.5.2.4
+export AWS_RDS_HOME=/Users/dkerwin/devlopment/RDSCli-1.1.005
+export PATH="$EC2_HOME/bin:$AWS_RDS_HOME/bin:$PATH"
+export EC2_KEY_DIR=/Users/dkerwin/.ec2
+export EC2_PRIVATE_KEY=${EC2_KEY_DIR}/pk-BROZORDFEJDID3CDZ5B2YHXNUMD2JPTO.pem
+export EC2_CERT=${EC2_KEY_DIR}/cert-BROZORDFEJDID3CDZ5B2YHXNUMD2JPTO.pem
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

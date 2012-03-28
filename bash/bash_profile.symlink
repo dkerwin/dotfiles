@@ -1,0 +1,18 @@
+alias ll="ls -lartG"
+alias runs="ps -ef | grep -i "
+alias puma="ssh puma"
+
+PATH="$PATH:/usr/local/mysql/bin:/Users/dkerwin/usr/local/bin:/usr/local/git/bin"
+export PATH
+export HISTCONTROL="ignoredups"
+export HISTFILESIZE=1000000000
+export HISTSIZE=10000000000
+export PYTHONPATH=$PYTHONPATH:/Users/dkerwin/usr/local/lib/python2.5/site-packages
+source ~/.bashrc
+
+eval `keychain --eval --agents ssh ~/.ssh/id_dsa ~/.ssh/id_dsa_git`
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
