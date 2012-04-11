@@ -3,8 +3,8 @@
 #---------------------------------------
 
 # Set prefix to C-a and free C-b
-set -g prefix C-a
 unbind C-b
+set -g prefix C-a
 bind C-a send-prefix
 
 # Reload tmux config shortcut and display "Config Reloaded"
@@ -22,4 +22,61 @@ set -g base-index 1
 
 # Start pane index at 1
 setw -g pane-base-index 1
+
+# Pane splitting
+bind + split-window -h
+bind - split-window -v
+
+# Pane resizing
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# Disable mouse scrolling
+setw -g mode-mouse off
+
+#---------------------------------------
+# Style
+#---------------------------------------
+
+# We really need colors
+set -g default-terminal "screen-256color"
+
+# Statusbar: black & white
+set -g status-fg white
+set -g status-bg black
+
+# Non-active windows
+setw -g window-status-fg cyan
+setw -g window-status-bg default
+setw -g window-status-attr dim
+
+# Active window
+setw -g window-status-current-fg white
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+
+# Pane borders
+set -g pane-border-fg green
+set -g pane-border-bg black
+set -g pane-active-border-fg black
+set -g pane-active-border-bg yellow
+
+# Message settings
+set -g message-fg white
+set -g message-bg black
+set -g message-attr bright
+
+# Status bar
+set -g status-left-length 40
+set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
+set -g status-right "#[fg=cyan]%Y-%m-%d %R"
+set -g status-utf8 on
+set -g status-justify centre
+
+# Acitivity monitor
+setw -g monitor-activity on
+set -g visual-activity on
+
 

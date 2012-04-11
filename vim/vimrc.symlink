@@ -62,3 +62,8 @@ augroup vagrant
     au!
     au BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
+
+highlight LineNr term=bold cterm=NONE ctermfg=white ctermbg=black gui=NONE guifg=yellow guibg=NONE
+
+
+

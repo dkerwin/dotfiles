@@ -50,8 +50,8 @@ rvm_prompt(){
 }
 
 directory_name(){
-  #echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
-  echo "%{$fg_bold[cyan]%}%~%{$reset_color%}"
+  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+  #echo "%{$fg_bold[cyan]%}%~\/%{$reset_color%}"
 }
 
 curtime() {
@@ -62,5 +62,7 @@ whonwhere() {
   echo "%{$fg_bold[green]%}%n%{$reset_color%}@%m"
 }
 
-export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | %Urvm%u: $(rvm_prompt) | %Ugit%u: $(git_dirty)$(need_push)\n› '
+#export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | %Urvm%u: $(rvm_prompt) | %Ugit%u: $(git_dirty)$(need_push)\n› '
+#export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | %Ugit%u: $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(curtime) $(whonwhere):$(directory_name) | %Ugit%u: $(git_dirty)$(need_push)\n\u2318 > '
 
