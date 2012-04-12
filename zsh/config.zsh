@@ -1,9 +1,3 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
-
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
@@ -46,3 +40,11 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export PS1='%m:%3~$(git_info_for_prompt)%# '
+else
+  export PS1='%3~$(git_info_for_prompt)%# '
+fi
+
+
