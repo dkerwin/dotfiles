@@ -44,8 +44,8 @@ au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set expandtab
 au BufNewFile,BufRead *.py set smarttab
 au BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-au BufNewFile,BufRead *.rb set tabstop=4
-au BufNewFile,BufRead *.rb set shiftwidth=4
+au BufNewFile,BufRead *.rb set tabstop=2
+au BufNewFile,BufRead *.rb set shiftwidth=2
 au BufNewFile,BufRead *.rb set autoindent
 au BufNewFile,BufRead *.rb set expandtab
 au BufNewFile,BufRead *.rb set smarttab
