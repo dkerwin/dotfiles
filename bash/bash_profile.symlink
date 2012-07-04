@@ -1,5 +1,4 @@
 alias ll="ls -lartG"
-alias runs="ps -ef | grep -i "
 alias puma="ssh puma"
 
 PATH="$PATH:/usr/local/mysql/bin:/Users/dkerwin/usr/local/bin:/usr/local/git/bin"
