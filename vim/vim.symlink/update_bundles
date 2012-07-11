@@ -24,6 +24,8 @@ git_bundles = [
   "https://github.com/vim-scripts/Gist.vim.git",
   "https://github.com/rodjek/vim-puppet.git",
   "https://github.com/scrooloose/syntastic.git",
+  "https://github.com/vim-scripts/ruby-matchit.git",
+  "https://github.com/tpope/vim-endwise.git",
 ]
 
 vim_org_scripts = [
