@@ -3,9 +3,9 @@
 #---------------------------------------
 
 # Set prefix to C-a and free C-b
-unbind C-b
-set -g prefix C-a
-bind C-a send-prefix
+#unbind C-b
+#set -g prefix C-a
+#bind C-a send-prefix
 
 # Reload tmux config shortcut and display "Config Reloaded"
 bind r source-file ~/.tmux.conf \; display "Config reloaded!"
