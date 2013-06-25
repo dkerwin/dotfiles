@@ -1,15 +1,13 @@
 # Sample gitconfig
 #
-# This is a sample gitconfig. Usually we keep a lot of sensitive information
-# here (things like authentication tokens, email addresses, and so on), so this
-# file is ignored in this project's .gitignore.
-#
-# To set this up, rename this file to `gitconfig.symlink` and you'll be able to
-# install this to the correct location by running the project's main `rake`
-# task.
+
+[hub]
+        protocol = https
 [user]
-        name = Zach Holman
-        email = your@example.com
+        name = AUTHORNAME
+        email = AUTHOREMAIL
+[credential]
+        helper = osxkeychain
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
@@ -20,12 +18,21 @@
         diff = auto
         status = auto
         branch = auto
+        ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = mate -w
+        editor = vim
 [apply]
         whitespace = nowarn
-[github]
-        user = holman
 [mergetool]
         keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to surpress warning message
+        default = simple
