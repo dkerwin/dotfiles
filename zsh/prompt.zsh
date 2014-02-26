@@ -10,7 +10,7 @@ git_dirty() {
     echo ${git_info}
   else
     git_info+="\u00B1 "
-    if [[ $st == "nothing to commit (working directory clean)" ]]
+    if [[ $st =~ ^nothing ]]
     then
       git_info+="on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
